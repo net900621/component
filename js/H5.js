@@ -1,6 +1,6 @@
 /* 内容管理对象 */
 var H5 = function () {
-  this.id = ('h5_'+Math.random()).replace('.', '_')
+  this.id = ('h5_' + ('000000' + (Math.random() * 100000 | 0)).slice(-6) ).replace('.', '_')//随机id确定位数会好一点
   this.el = $('<div class="h5" id="'+this.id+'">').hide();
   this.page = [];
   $('body').append(this.el);
